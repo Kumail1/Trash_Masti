@@ -136,6 +136,25 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/history.js"></script>
     <script src="js/side-nav.js"></script>
+<script src="js/pulltorefresh.js" type="text/javascript"></script> 
+<script> 
+const ptr = PullToRefresh.init({
+  mainElement: 'body',
+  onRefresh() {
+    window.location.reload();
+  },
+});
 
+PullToRefresh.init({
+  mainElement: 'body', // above which element?
+  onRefresh: function (done) {
+    setTimeout(function () {
+      done(); // end pull to refresh
+      //alert('refresh');
+    }, 1500);
+  }
+
+});
+</script>
 </body>
 </html>
