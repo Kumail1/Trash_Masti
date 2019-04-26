@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
 
                      
 
-                    //window.location = "sale_trash.html";
+                    window.location = "index.html";
 
                
 
