@@ -13,6 +13,23 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/font-awesome-4/css/font-awesome.min.css">
+    <link rel="stylesheet" href="load/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="load/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="load/jqxcore.js"></script>
+    <script type="text/javascript" src="load/jqxloader.js"></script>
+    <script type="text/javascript" src="load/jqxbuttons.js"></script>
+    <script type="text/javascript" src="load/demos.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#openLoader").jqxButton({
+                width: 150
+            });
+            $("#jqxLoader").jqxLoader({ isModal: true, width: 100, height: 60, imagePosition: 'top' });
+            $('#openLoader').on('click', function () {
+                $('#jqxLoader').jqxLoader('open');
+            });
+        });
+    </script>
 
 <style type="text/css">
 .field-icon {
@@ -77,9 +94,11 @@
 					Playing<input value="playing" type="checkbox" name="hob[]"/>
 					</td>
 				</tr> -->
-				
+				 <div id="jqxLoader">
+   				 </div>
+
 				<div colspan="2" align="center" style="padding-top: 30px">
-					<input type="submit" class="btn btn-success" id="submit"  name="save"/>
+					<input type="submit" class="btn btn-success" value="Register" id="openLoader" name="save" style="width: 150px !important;"/>
 				</div>
 					
 
